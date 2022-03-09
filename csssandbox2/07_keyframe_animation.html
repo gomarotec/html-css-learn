@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes</title>
+    <style>
+        body{
+            background: #333;
+        }
+
+        .box {
+            background: white;
+            width: 200px;
+            height: 200px; 
+            animation-name: animate1;
+            animation-duration:5s;
+            animation-iteration-count:1; /*repeats 2 times, can happen infinit*/
+            animation-fill-mode: forwards; /*the style gets the final state*/
+            animation-delay: 2s; /*waits 5ec before start*/
+            animation-direction: alternate; /*starts FROM and goes back --> alternate-reverse*/
+            animation-timing-function: ease; /* ease-start fast and then slow, there are different options*/
+            /*We can do the previous in 1 line*/
+            
+        }
+
+        @keyframes animate1{
+            from{ 
+                top:0;
+               
+            }
+
+            to{
+                width:600px;
+                background-color: red;
+                top: 900px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

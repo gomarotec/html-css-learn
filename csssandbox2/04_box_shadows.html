@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+        }
+
+        .box{
+            padding: 1rem;
+            margin: 1rem;
+            background: coral;
+            color: #fff;
+
+            /* Negative value can be used for the offsetX and offsetY */
+            /*offset-x offset-y and color*/
+            box-shadow: 10px 10px teal;
+
+            /*offset-x offset-y and blur-radius*/
+            box-shadow: 5px 5px 20px teal;
+
+            /*BEST OPTION*/
+            /*offset-x offset-y  blur-radius spread-radius color*/
+            box-shadow: 3px 3px 10px 1px rgba(0,0,0, 0.3);
+
+            /* inset offset-x offset-y color*/
+            box-shadow: inset -3px -3px teal;
+
+            /*multiple shadows*/
+            box-shadow: 3px 3px teal, -3px -3px 10px blue;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 4rem;
+        }
+
+        h1.a{
+            /*h-shadow v-shadow color */
+            text-shadow: 0.2rem 0.2rem steelblue;
+        }
+        h1.b{
+            /*h-shadow v-shadow  blur color */
+            text-shadow: 0.4rem 0.3rem 0.7rem steelblue;
+        }
+
+        h1.b{
+            /*white text, blue shadow */
+           color: #fff;
+           text-shadow: 0.2rem 0.2rem 1rem steelblue;
+        }
+
+        h1.d{ /*negative value*/
+            text-shadow: 0.4rem 0.3rem 0.7rem steelblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, possimus!</p>
+        </div>
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, possimus!</p>
+        </div>
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, possimus!</p>
+        </div>
+    </div>
+    <h1 class="a">Welcome to my course!</h1>
+    <h1 lass="b">Welcome to my course!</h1>
+    <h1 lass="c">Welcome to my course!</h1>
+    <h1 lass="d">Welcome to my course!</h1>
+</body>
+</html>
